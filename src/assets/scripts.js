@@ -15,6 +15,10 @@ document.addEventListener('DOMContentLoaded', () => {
   reset.addEventListener('click', async (event) => {
     event.preventDefault();
 
+    if( ! confirm('Do really want to clear all tests?') ) {
+      return;
+    }
+
     // Remove the items in the database
     const body = new FormData();
     body.append('nonce', MIWPB.nonce);  
