@@ -61,9 +61,9 @@ document.addEventListener('DOMContentLoaded', () => {
     let deleteTime;
 
     // Reset notifications
-    successNotication.classList.add('hidden');
-    errorNotification.classList.add('hidden');
-    infoNotification.classList.remove('hidden');
+    successNotication.style.display = 'none';
+    errorNotification.style.display = 'none';
+    infoNotification.style.display = 'inline-block';
 
     // Our FormData
     const body = new FormData();
@@ -80,8 +80,8 @@ document.addEventListener('DOMContentLoaded', () => {
       });
       insertTime = await insertRequest.json();
     } catch {
-      infoNotification.classList.add('hidden');
-      errorNotification.classList.remove('hidden');
+      infoNotification.style.display = 'none';
+      errorNotification.style.display = 'inline-block';
     } 
 
     // Querying
@@ -94,8 +94,8 @@ document.addEventListener('DOMContentLoaded', () => {
       });
       queryTime = await queryRequest.json();
     } catch {
-      infoNotification.classList.add('hidden');
-      errorNotification.classList.remove('hidden');
+      infoNotification.style.display = 'none';
+      errorNotification.style.display = 'inline-block';
     }
     
     // Deleting
@@ -108,8 +108,8 @@ document.addEventListener('DOMContentLoaded', () => {
       });
       deleteTime = await deleteRequest.json();
     } catch {
-      infoNotification.classList.add('hidden');
-      errorNotification.classList.remove('hidden');
+      infoNotification.style.display = 'none';
+      errorNotification.style.display = 'inline-block';
     }   
     
     // Adding the results
@@ -125,11 +125,11 @@ document.addEventListener('DOMContentLoaded', () => {
     });   
 
     const response = await updated.json();
-    infoNotification.classList.add('hidden');
+    infoNotification.style.display = 'none';
 
     if( ! response.success ) {
-      infoNotification.classList.add('hidden');
-      errorNotification.classList.remove('hidden'); 
+      infoNotification.style.display = 'none';
+      errorNotification.style.display = 'inline-block'; 
       return;
     }
 
@@ -164,7 +164,7 @@ document.addEventListener('DOMContentLoaded', () => {
     </tr>`;
     table.insertAdjacentHTML('afterbegin', resultRowHTMLString);
 
-    successNotication.classList.remove('hidden');
+    successNotication.style.display = 'inline-block';
 
   });
 });

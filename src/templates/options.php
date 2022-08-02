@@ -30,14 +30,14 @@
     </table>
     <div class="submit">
 		  <?php submit_button( __('Run Benchmark'), 'primary button-hero', 'submit', false); ?>	
-      <div class="update-nag notice notice-info inline hidden" style="margin: 0 0 0 8px;">
+      <div class="update-nag notice notice-info inline" style="margin: 0 0 0 8px; display: none;">
         <span class="spinner is-active" style="float: left; margin: 0 10px 0 0;"></span>
         <?php _e('The benchmark is running, please do not close this page.'); ?>
       </div>       
-      <div class="update-nag notice notice-success inline hidden" style="margin: 0 0 0 8px;">
+      <div class="update-nag notice notice-success inline" style="margin: 0 0 0 8px; display: none;">
         <?php _e('Hurray! The Benchmark is complete!'); ?>
       </div>
-      <div class="update-nag notice notice-error inline hidden" style="margin: 0 0 0 8px;">
+      <div class="update-nag notice notice-error inline" style="margin: 0 0 0 8px; display: none;">
         <?php _e('Failed to benchmark, please try again. You may need to increase your PHP execution time and request timeout values.'); ?>
       </div>      
     </div>
