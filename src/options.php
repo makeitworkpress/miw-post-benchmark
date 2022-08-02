@@ -5,7 +5,7 @@
 defined( 'ABSPATH' ) or die('Nope...');
 
 // Loads dependencies
-require_once(  dirname(__FILE__) . './classes/MIW_PB_List_Table.php' );
+require_once(  dirname(__FILE__) . '/classes/MIW_PB_List_Table.php' );
 
 /**
  * Setup the options page

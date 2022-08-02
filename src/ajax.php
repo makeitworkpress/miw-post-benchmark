@@ -5,8 +5,8 @@
 defined( 'ABSPATH' ) or die('Nope...');
 
 // Load our actions
-require_once(  dirname(__FILE__) . './actions.php' );
-require_once(  dirname(__FILE__) . './score.php' );
+require_once(  dirname(__FILE__) . '/actions.php' );
+require_once(  dirname(__FILE__) . '/score.php' );
 
 /**
  * Add the ajax actions

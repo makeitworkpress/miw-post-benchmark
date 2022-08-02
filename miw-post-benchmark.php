@@ -8,9 +8,9 @@
  * Version: 1.0.0
  */
 
-require_once( dirname(__FILE__) . './src/ajax.php' );
-require_once( dirname(__FILE__) . './src/assets.php' );
-require_once( dirname(__FILE__) . './src/options.php' );
+require_once( dirname(__FILE__) . '/src/ajax.php' );
+require_once( dirname(__FILE__) . '/src/assets.php' );
+require_once( dirname(__FILE__) . '/src/options.php' );
 
 add_action('plugins_loaded', function() {
   miw_pb_setup_ajax();
